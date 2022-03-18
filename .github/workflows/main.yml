@@ -12,8 +12,8 @@ jobs:
         id: buildpages
         uses: mborejdo/action-rusty@refs/heads/master
         with:
-          mode: 'zola'
-          cli: 'build'
+          mode: 'zola build'
+          cli: ''
       - name: pushing pages
         id: pushpages
         uses: mborejdo/action-rusty@refs/heads/master
