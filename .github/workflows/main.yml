@@ -9,7 +9,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Generating pages
-        id: pages
+        id: buildpages
         uses: mborejdo/action-rusty@refs/heads/master
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
@@ -19,7 +19,7 @@ jobs:
           infile: ''
           outfile: ''
       - name: pushing pages
-        id: pages
+        id: pushpages
         uses: mborejdo/action-rusty@refs/heads/master
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
