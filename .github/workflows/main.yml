@@ -1,0 +1,18 @@
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  tweetshot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Generating tweetshot
+        id: til
+        uses: mborejdo/action-rusty@refs/heads/master
+        with:
+          mode: 'zola --help'
+          cli: ''
+          infile: ''
+          outfile: ''

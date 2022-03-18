@@ -1,0 +1,62 @@
+base_url = "./"
+title = ""
+description = ""
+default_language = "en"
+theme = "after-dark"
+output_dir = "public"
+compile_sass = false
+minify_html = false
+ignored_content = []
+
+generate_feed = true
+feed_filename = "atom.xml"
+hard_link_static = false
+build_search_index = false
+
+taxonomies = [
+    {name = "categories", feed = true},
+    {name = "tags", feed = true},
+]
+
+[markdown]
+highlight_code = true
+extra_syntaxes = []
+highlight_theme = "dracula"
+render_emoji = false
+external_links_target_blank = false
+external_links_no_follow = false
+external_links_no_referrer = false
+smart_punctuation = false
+
+[link_checker]
+skip_prefixes = [
+    "http://[2001:db8::]/",
+]
+
+skip_anchor_prefixes = [
+    "https://caniuse.com/",
+]
+
+[slugify]
+paths = "on"
+taxonomies = "on"
+anchors = "on"
+
+[search]
+include_title = true
+include_description = false
+include_path = false
+include_content = true
+
+[translations]
+
+[languages]
+
+[extra]
+after_dark_menu = [
+    {url = "$BASE_URL", name = "Home"},
+    {url = "$BASE_URL/categories", name = "Categories"},
+    {url = "$BASE_URL/tags", name = "Tags"},
+    {url = "https://google.com", name = "Google"},
+]
+after_dark_title = "Today I learned"
