@@ -15,6 +15,7 @@ const DESTFOLDER = `${BASEFOLDER}/${REPO}`;
 function moveZola() {
     return new Promise(async (resolve: (value: boolean) => void) => {
         await move(`${BASEFOLDER}/public`, `${DESTFOLDER}/docs`, { overwrite: true });
+        //await move(`${BASEFOLDER}/public`, `${DESTFOLDER}/docs`, { overwrite: true });
 
         resolve(true);
     });
