@@ -15,9 +15,15 @@ jobs:
         uses: mborejdo/action-rusty@refs/heads/master
         with:
           mode: 'wcloud'
-          cli: '--height 486 --width 846 --font fonts/FinkHeavy.ttf '
+          cli: '--height 286 --width 780 --font fonts/FinkHeavy.ttf '
           infile: 'cloud.md'
           outfile: 'header.png'
+      - name: Colorize Image
+        id: colorize
+        uses: mborejdo/action-rusty@refs/heads/master
+        with:
+          mode: 'sic -i ./images/header.png --invert -o ./images/header.png'
+          cli: ''
       - name: Generating pages
         id: buildpages
         uses: mborejdo/action-rusty@refs/heads/master
