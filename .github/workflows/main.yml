@@ -13,6 +13,6 @@ jobs:
         uses: mborejdo/action-rusty@refs/heads/master
         with:
           mode: 'zola'
-          cli: '--help'
+          cli: 'build'
           infile: ''
           outfile: ''
