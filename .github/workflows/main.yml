@@ -3,16 +3,26 @@ on:
     branches: [ master ]
 
 jobs:
-  til:
+  pages:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Generating TIL page
-        id: til
+      - name: Generating pages
+        id: pages
         uses: mborejdo/action-rusty@refs/heads/master
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
           mode: 'zola'
           cli: 'build'
           infile: ''
           outfile: ''
+      - name: pushing pages
+        id: pages
+        uses: mborejdo/action-rusty@refs/heads/master
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          mode: 'deno run -A --quiet ./index.ts'
+          cli: ''
