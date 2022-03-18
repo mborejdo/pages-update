@@ -11,18 +11,15 @@ jobs:
       - name: Generating pages
         id: buildpages
         uses: mborejdo/action-rusty@refs/heads/master
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
           mode: 'zola'
           cli: 'build'
-          infile: ''
-          outfile: ''
       - name: pushing pages
         id: pushpages
         uses: mborejdo/action-rusty@refs/heads/master
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+          REPO: mborejdo.github.io
         with:
           mode: 'deno run -A --quiet ./index.ts'
           cli: ''

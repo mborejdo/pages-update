@@ -1,1 +1,14 @@
-console.log("FOO");
+import { gitConfigure, gitClone, gitPush } from "https://cdn.jsdelivr.net/gh/mborejdo/profile-update/data/git.ts";
+
+const { writeTextFile, env } = Deno;
+const API_TOKEN_GITHUB = env.get("API_TOKEN_GITHUB") || "";
+const REPO = env.get("REPO") || "mborejdo";
+
+const BASEFOLDER = "/github/workspace/data";
+const DESTFOLDER = `${BASEFOLDER}/${REPO}`;
+
+
+await gitConfigure(API_TOKEN_GITHUB);
+await gitClone(`https://${API_TOKEN_GITHUB}@github.com/mborejdo/${REPO}.git`, DESTFOLDER);
+
+await gitPush(DESTFOLDER);
