@@ -24,7 +24,7 @@ jobs:
         with:
           mode: 'zola build'
           cli: ''
-      - name: pushing pages
+      - name: Pushing pages
         id: pushpages
         uses: mborejdo/action-rusty@refs/heads/master
         env:
