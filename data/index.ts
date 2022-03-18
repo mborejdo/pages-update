@@ -22,6 +22,6 @@ function moveZola() {
 
 
 await gitConfigure(API_TOKEN_GITHUB);
-await gitClone(`https://github.com/mborejdo/${REPO}.git`, DESTFOLDER);
+await gitClone(`https://${API_TOKEN_GITHUB}@github.com/mborejdo/${REPO}.git`, DESTFOLDER);
 await moveZola();
 await gitPush(DESTFOLDER);
