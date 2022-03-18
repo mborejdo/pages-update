@@ -14,5 +14,3 @@ jobs:
         with:
           mode: 'zola'
           cli: 'build'
-          infile: ''
-          outfile: ''
