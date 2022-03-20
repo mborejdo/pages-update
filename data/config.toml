@@ -56,6 +56,5 @@ include_content = true
 after_dark_menu = [
     {url = "$BASE_URL", name = "Home"},
     {url = "$BASE_URL/til", name = "Today I learned"},
-    {url = "$BASE_URL/tags", name = "Tags"},
 ]
-after_dark_title = "mborejdo"
+after_dark_title = ""
