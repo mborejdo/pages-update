@@ -1,7 +1,7 @@
 {% extends "after-dark/templates/index.html" %}
 
 {% block extra_head %}
-
+  <link rel="alternate" type="application/atom+xml" title="RSS" href="{{ get_url(path="atom.xml", trailing_slash=false) }}">
 {% endblock %}
 
 {% block header %}
