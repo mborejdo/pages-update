@@ -16,7 +16,7 @@ jobs:
         with:
           mode: 'wcloud'
           cli: '--height 286 --width 780 --font fonts/FinkHeavy.ttf '
-          infile: 'cloud.md'
+          infile: 'cloud2.md'
           outfile: 'header.png'
       - name: Colorize Image
         id: colorize
