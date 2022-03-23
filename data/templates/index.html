@@ -7,7 +7,7 @@
 {% block header %}
     {% if config.extra.after_dark_menu %}
         <header>
-            <img src="$BASE_URL/images/header.png" alt="main logo featuring software engineering related words" />
+            <img src="{{ replace(from="$BASE_URL/images/header.png", to="$BASE_URL/images/header.png") }}"  alt="main logo featuring software engineering related words" />
             <br/>
             <br/>
             <nav itemscope itemtype="http://schema.org/SiteNavigationElement">
