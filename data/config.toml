@@ -5,7 +5,7 @@ default_language = "en"
 theme = "after-dark"
 output_dir = "public"
 compile_sass = false
-minify_html = false
+minify_html = true
 ignored_content = []
 
 generate_feed = true
@@ -22,19 +22,17 @@ taxonomies = [
 highlight_code = true
 extra_syntaxes = []
 highlight_theme = "dracula"
-render_emoji = false
-external_links_target_blank = false
+render_emoji = true
+external_links_target_blank = true
 external_links_no_follow = false
 external_links_no_referrer = false
 smart_punctuation = false
 
 [link_checker]
 skip_prefixes = [
-    "http://[2001:db8::]/",
 ]
 
 skip_anchor_prefixes = [
-    "https://caniuse.com/",
 ]
 
 [slugify]
@@ -56,5 +54,6 @@ include_content = true
 after_dark_menu = [
     {url = "$BASE_URL", name = "Home"},
     {url = "$BASE_URL/til", name = "Today I learned"},
+    {url = "https://github.com/mborejdo", name = "Github"},
 ]
 after_dark_title = ""
