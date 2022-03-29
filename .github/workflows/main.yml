@@ -33,7 +33,7 @@ jobs:
       - name: Generating favicon
         id: favicon
         uses: mborejdo/action-rusty@refs/heads/master
-         with:
+        with:
           mode: 'faviconr --bg "#000000" --fg "#ffffff" --font ./fonts/FinkHeavy.ttf --offset 20 --scale 80 --output ./public/'
           cli: ''
       - name: Pushing pages
