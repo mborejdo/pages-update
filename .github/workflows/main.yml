@@ -30,6 +30,12 @@ jobs:
         with:
           mode: 'zola build'
           cli: ''
+      - name: Generating favicon
+        id: favicon
+        uses: mborejdo/action-rusty@refs/heads/master
+         with:
+          mode: 'faviconr --bg "#000000" --fg "#ffffff" --font ./fonts/FinkHeavy.ttf --offset 20 --scale 80 --output ./public/'
+          cli: ''
       - name: Pushing pages
         id: pushpages
         uses: mborejdo/action-rusty@refs/heads/master

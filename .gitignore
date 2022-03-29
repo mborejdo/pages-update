@@ -1,3 +1,6 @@
 data/public
 data/mborejdo.github.io
 data/images/header.png
+data/*.ico
+data/*.png
+data/*.jpg
